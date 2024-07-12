@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img[src="codingtemple-logo.png"]{
+            width: 100%;
+            height: auto;
+        }
+        .hero{
+            position: relative;
+            display: grid;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 38.6vh;
+            gap: 0px;
+            background-image: url('ba76386166a96aaeb9ebe182cf7fc46f.jpg');
+            border-bottom: 3px solid black;
+            z-index: 10 ;
+        }
+        #css{
+            display: grid;
+            grid-template-columns: repeat(3, auto); /* Adjust based on the number of letters/spans */
+            justify-content: center;
+            margin-bottom: -30px;
+        }
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            align-self: start;
+        }
+        .hero span{
+            border: 2px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 7vh;
+            width: 7vw;
+            font-size: 2em;
+            
+        }
+        #c{
+            margin: 7px;
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+        }
+        #s1{
+            margin: 7px;
+            background-color: blueviolet;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;    
+            text-shadow: 3px 3px 3px black;    }
+        #s2{
+            margin: 7px;
+            background-color: rgb(255, 163, 42);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+                    }
+        #g{
+            margin: 7px;
+            background-color: crimson;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+        }
+        #r{
+            margin: 7px;
+            background-color: chartreuse;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+        
+        }
+        #i{
+            margin: 7px;
+            background-color: fuchsia;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+        }
+        #d{
+            margin: 7px;
+            background-color: rgb(91, 212, 176);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:azure;
+            border: 3px solid black;
+            box-shadow: 5px 10px 5px black;
+            text-shadow: 3px 3px 3px black;
+        }
+        nav{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            padding: 15px;
+            border: 3px solid black;
+            margin-bottom: 3px;
+            
+            box-shadow: 3px 5px 10px;
+
+        }
+        .nav-links{
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: end;
+            align-content:end;
+            gap: 30px;
+            font-size:  1.3em;
+            font-family: monospace;
+
+        }
+        .nav-links h3{
+            background-color: rgb(102, 102, 102);
+            padding: 1vw;
+            border-radius: 0px 20px 0px 20px;
+            box-shadow: 2px 2px 2px;
+            color:white;
+            font-size: 1.5vw;
+        }
+        .nav-links h3:hover{
+            cursor:crosshair;
+        }
+       
+        .container{
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(85, 216, 59, 0.7), rgba(5, 131, 250, 0.7));
+            padding-bottom: 80px;
+            
+            overflow: visible;
+        }
+        #road img{
+            position: relative;
+            top: -10%;
+            margin-top: -10%;
+            margin-left: 3%;
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 5px solid red;
+            box-shadow: 10px 9px rgba(0, 0, 0, 0.8);
+            z-index: 11;
+            
+        }
+        #road {
+            position: relative;
+            width: 25%;
+            margin-left: 3%;
+            
+
+        }
+        .city-grid{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(108, 185, 252);
+            padding: 10px;
+            border-radius: 8px;     
+            margin-bottom: -5vw; 
+            margin-right: -30vw;
+            margin-left: 10vw;
+            font-size: 1.5vw;
+            border: 2px solid black;
+            box-shadow: 10px 9px rgba(0, 0, 0, 0.8);
+            font-family: monospace;
+            z-index: 12;
+          }
+          .building{
+            position: absolute;
+            width: 30vw;
+            height: auto;
+            right: 0;
+            top: 0;
+            margin-top: 8%;
+            margin-right: 2%;
+          }
+          .building img{
+            width: 100%;
+          }
+          .building p{
+            font-family: monospace;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(218, 151, 214);
+            padding: 15px;
+            border-radius: 8px;     
+            margin-bottom: -2vw; 
+            margin-left: -20vw;
+            margin-right: 10vw;
+            font-size: 1.5vw;
+            border: 2px solid black;
+            box-shadow: 10px 9px rgba(0, 0, 0, 0.8);
+            font-family: monospace;
+          }
+          .grid-container{
+            position: relative;
+            margin-top: 9vw;
+            margin-left: 8%;
+          
+          }
+          .grid-container img{
+            width: 40%;
+          }
+          .grid-container p{
+            position: absolute;
+            background-color: aquamarine;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 1.5vw;
+            margin-top: -5vw;
+            margin-right: 40vw;
+            margin-left: 5vw;
+            border: 2px solid black;
+            box-shadow: 10px 9px rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+          }
+          footer{
+            background-color: aliceblue;
+            border: 2px solid black;
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-size: 1.5vw;
+            padding-left:15vw ;
+          }
+          
+       
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav>
+            <img src="codingtemple-logo.png">
+            <div class="nav-links">
+                <h3><a href="flex-index.html">Flexbox</a></h3>
+                <h3>Placeholder</h3>
+                <h3>Placeholder</h3>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="hero">
+        <div id="css">
+        <span id="c">C</span><span id="s1">S</span><span id="s2">S</span>
+        </div>
+        <div id="grid">
+        <span id="g">G</span><span id="r">R</span><span id="i">I</span><span id="d">D</span>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class="city">
+            <div id="road">
+                <img src="street.jpg">
+                <div class='city-grid'><p>CSS Grid Layout is a powerful layout system in CSS that allows for the creation of complex and responsive web layouts with ease. To understand how CSS Grid works, it can be helpful to compare it to a city grid plan. </p></div>
+                
+            </div>
+        </div>
+        <div class="building">
+            <img src="6381936.png">
+            <p>The Items inside of the grid can be directly related to the buildings inside of a city, giving a home for the data of the webpage</p>
+        </div>
+        <div class="grid-container">
+            <img src="osLyADYggF-500.png">
+            <p>The Outer Container of the grid can be related to the outer limits of the city and is what holds all elements of the grid itself.</p>
+        </div>
+    </div>
+    <footer>
+        <h3>Contact</h3>
+        <h3>More</h3>
+        <h3>Blogs</h3>
+    </footer>
+</body>
+</html>

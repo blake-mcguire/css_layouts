@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grids{
+            font-size: 1.5vw;
+
+        }
+        footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: rgb(67, 187, 147, 0.3);
+            padding: 2%;
+            border: 1px solid black;
+        }
+        main{
+            background-color: rgba(212, 103, 203, 0.459);
+        }
+        header{
+            background-color: rgb(67, 187, 147, 0.3);
+            border: 3px solid black;
+        }
+        nav {
+            
+            display: flex;
+            justify-content:  space-between;
+            align-items: center;
+        }
+        .logo {
+            padding: 2%;
+            padding-left: 8%;
+        }
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+            margin-right: 10%;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        #contentbox1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10%;
+            margin: 3% 3% 3% 3%;
+            
+            
+        }
+        .hero{
+            background-image: url('Responsive-Grid-List.webp');
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10%;
+            margin: 3% 3% 3% 3%;
+            border-bottom: 2px solid black;
+            border-radius: 50px;
+            box-shadow: 10px 10px 8px;
+        }
+        #contentbox1 img {
+            width: 20%;
+            border: 2px solid yellow;
+            margin-left: 5%;
+            flex: 2;
+        }
+
+        #contentbox1 p {
+            line-height: 1.6;
+            flex: 5;
+            margin-right: 5%;
+            font-size: 1.3vw;
+            font-family: monospace;
+            border: 4px solid rgb(67, 187, 147);
+            border-radius: 20px;
+            padding: 3%;
+            text-align: center;
+            box-shadow: 10px 10px 3px ;
+            background-color: rgb(255, 156, 110);
+        }
+        .hero h1{
+            margin-left: 3vw;
+            text-align: center;
+            color:rgb(67, 187, 147);
+            font-size: 7vw;
+            font-family: monospace;
+            text-shadow: 1px 1px yellow,
+            2px 1px yellow,
+            1px 1px yellow,
+            1px 1px yellow;
+            background-color: rgb(121, 65, 226);
+            padding: 1%;
+            border-radius: 20px;
+            box-shadow: 8px 5px 2px ;
+            font-weight: bold;
+            flex-shrink: 1;
+        }
+
+        #flex_properties h2{
+            
+            text-align: center  ;
+            padding-bottom: 5%;
+            font-size: 5vw;
+            font-family: monospace;
+            color: rgb(13, 216, 216);
+            text-shadow: 4px 3px black;
+        }
+       
+        .properties_content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            align-content: space-between;
+            
+            
+        }
+        .properties_content ul{
+            box-shadow: 5px 3px 2px ;
+            border: 3px solid;
+            flex-shrink: 1;
+            padding: 4%;
+            padding-left: 6%;
+            padding-bottom: 20px;
+            background-color: rgb(100, 189, 189);
+            margin-left: -4%;
+            width: 50vw;
+        }
+
+        .properties_content p{
+            font-size: 1.5vw;
+        }
+        .properties_content ul li{
+            font-family: monospace;
+            font-size: 2.5vw ;
+            padding: 2%;
+        }
+        .values{
+            padding: 0.3% !important;
+            font-size: 1.5vw !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+        .values li{
+            padding: 0.3% !important;
+            font-size: 1.5vw !important;
+        }
+        .fleximg{
+            margin-left: 3%;
+            margin-right: 3%;
+            width: 25vw;
+            height: auto;
+            flex-shrink: 1;
+            position: sticky;
+            top: 10%;
+            border: 5px solid rgb(221, 135, 23);
+            border-radius: 20px;
+            box-shadow: 10px 9px 5px ;
+
+        }
+        .code{
+            color: rgb(250, 233, 77);
+            background-color: rgb(75, 73, 73);
+            padding: 3%;
+            margin-top: 10px;
+            border-radius: 20px;
+            border: 2px solid orange
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img class='logo' src="codingtemple-logo.png">
+            <div class="grids"><a href="grid-index.html">Grid Layout</a></div>
+            <div class="nav-tabs">
+                <h3>Home</h3>
+                <h3>About</h3>
+                <h3>Profile</h3>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="hero">
+            <h1>CSS {Flexbox}</h1>
+
+            <div id="contentbox1">
+                
+                <p>CSS Flexbox, officially known as the CSS Flexible Box Layout Module, is a one-dimensional layout method for laying out items in rows or columns within a container. It allows for the distribution of space along a single axis, making it easier to design flexible and efficient layouts without having to use floats or positioning. Flexbox is particularly useful for aligning content, distributing space around items, and changing their order visually without altering the HTML.</p>
+            </div>
+            </div>
+            
+            <div id="flex_properties">
+                <h2>Flexbox Properties</h2>
+                <div class="properties_content">
+                <ul>
+                    <li>Display</li>
+                    <div class="code">
+                    <code>selector {
+                        display: flex|inline-flex;
+                    }
+                    </code>
+                    </div>
+                    <p>Display defines an element as a flex container, it can be set to <strong>flex</strong>, or <strong>inline-flex</strong>.</p>
+                    <li>Flex-Direction</li>
+                    <div class="code">
+                    <code> selector {flex-direction: row|row-reverse|column-reverse;}</code>
+                    </div>
+                    <p>Specifies the direction of the flex item within the conatiner. 
+                        Values include:
+                        <ul class="values">
+                            <li>Row</li>
+                            <li>Row-reverse</li>
+                            <li>column-reverse</li>
+                        </ul> 
+                    </p>
+                    <li>Flex-Wrap</li>
+                    <div class="code">
+                    <code >selector {flex-wrap: nowrap|wrap|wrap-reverse;}</code>
+                    </div>
+                    <p>Controls Whether the flex items should wrap onto multiple lines 
+                        Values include:
+                        <ul class="values">
+                            <li>nowrap</li>
+                            <li>wrap</li>
+                            <li>wrap-reverse</li>
+                        </ul>
+                    </p>
+                    <li>Justify-content</li>
+                    <div class="code">
+                    <code>selector {justify-content: flex-start|flex-end|center|space-around|space-between|space-evenly;}</code>
+                    </div>
+                    <p>Aligns Flex items along the main axis of the container Values Include:
+                        <ul class="values">
+                            <li>flex-start</li>
+                            <li>flex-end</li>
+                            <li>center</li>
+                            <li>space-around</li>
+                            <li>space-between</li>
+                            <li>space-evenly</li>
+                        </ul>
+                    </p>
+                    <li>Align-Items</li>
+                    <div class="code">
+                    <code>selector {align-items: flex-start|flex-end|center|space-around|space-between|space-evenly;} </code>
+                    </div>
+                    <p>Aligns flex items along the cross axis. Values include: 
+                        <ul class="values">
+                            <li>stretch</li>
+                            <li>flex-start</li>
+                            <li>flex-end</li>
+                            <li>center</li>
+                            <li>baseline</li>
+                        </ul>
+                    </p>
+                    <li>Align-Content</li>
+                    <div class="code">
+                    <code>selector {align-content: stretch|flex-start|flex-end|center|space-between|space-around;}</code>
+                    </div>
+                    <p>Aligns Flex lines within the flex container. Values Include:
+                        <ul class="values">
+                            <li>stretch</li>
+                            <li>flex-start</li>
+                            <li>flex-end</li>
+                            <li>center</li>
+                            <li>space-between</li>
+                            <li>space-around</li>
+
+                        </ul>
+                    </p>
+                    <li>Flex-Flow</li>
+                    <p>Shorthand for flex-direction and flex-wrap</p>
+                    
+                </ul>
+                <img class='fleximg'src="flexbox-thumbnail.png">
+            </div>
+            </div>
+        </div>  
+
+
+
+    </main>
+    <footer>
+        <h3>Contact Us</h3>
+        <h3>Events</h3>
+        <h3>Blog</h3>
+    </footer>
+</body>
+</html>
